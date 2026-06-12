@@ -4,8 +4,6 @@
 
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Data Analytics](https://img.shields.io/badge/Data%20Analytics-2e86c1?style=for-the-badge&logo=databricks&logoColor=white)
-![Verdict](https://img.shields.io/badge/Verdict-Not%20Always-8B0000?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
 </div>
 
@@ -19,7 +17,6 @@
 - [Key Findings](#key-findings)
 - [The Verdict](#the-verdict)
 - [Business Recommendations](#business-recommendations)
-- [Data Transformation](#data-transformation)
 - [Dashboard Preview](#dashboard-preview)
 
 ---
@@ -70,14 +67,14 @@ Switches the entire dashboard between All, Furniture, Office Supplies, and Techn
 |---|---|---|---|
 | 1 | Okidata Pacemark 4410N Wide Format | **-$39,743** | Technology |
 | 2 | Polycom ViewStation ISDN | **-$36,447** | Technology |
-| 3 | Global High-Back Leather Tilter, Burgundy | **-$23,238** | Furniture |
-| 4 | Epson DFX-8500 Dot Matrix Printer | **-$22,134** | Technology |
+| 3 | Epson DFX-8500 Dot Matrix Printer | **-$29,134** | Technology |
+| 4 | Global High-Back Leather Tilter, Burgundy | **-$23,238** | Furniture |
 | 5 | Lesro Sheffield Collection Coffee Table | **-$14,874** | Furniture |
 
 ### What the Trend and Map Reveal Per Item
 
 **Okidata Pacemark 4410N — Profit: -$39,743**
-Sold in California, Texas, and Massachusetts only. The profit trend shows a **sharp upward recovery from 2015 Q2 onward**, crossing the trend line and approaching 0K by end of 2016. This is a geographically concentrated loss — not a globally broken product.
+Sold in California, Texas, and Washington only. The profit trend shows a **sharp upward recovery from 2015 Q2 onward**, crossing the trend line and approaching 0K by end of 2016. This is a geographically concentrated loss — not a globally broken product.
 
 **Polycom ViewStation ISDN — Profit: -$36,447**
 Sold in Pacific Northwest and Southeast (Washington, Oregon, Idaho, North Carolina, Alabama). Trend shows **steady improvement from 2013 through mid-2015**, then a dip in late 2015. The improvement phase is real and visible — this product was recovering before something disrupted it.
@@ -85,11 +82,11 @@ Sold in Pacific Northwest and Southeast (Washington, Oregon, Idaho, North Caroli
 **Global High-Back Leather Tilter, Burgundy — Profit: -$23,238**
 Sold broadly across many US states. Profit trend shows **consistent upward improvement across the full 2013–2016 period**, staying above the trend line for most quarters. Of all items on this list, this one shows the clearest recovery signal.
 
-**Epson DFX-8500 Dot Matrix Printer — Profit: -$22,134**
+**Epson DFX-8500 Dot Matrix Printer — Profit: -$29,134**
 Sold in California, Texas, and Wisconsin. Trend shows a **stable loss pattern, then a sharp crash in mid-2016, followed by a recovery back to 0K**. The crash suggests a one-time event (bulk discount or returns spike) rather than a structural problem — but the overall loss is persistent.
 
 **Lesro Sheffield Collection Coffee Table — Profit: -$14,874**
-Sold in Washington, Kansas, Texas, Wisconsin, New York, and Massachusetts. Trend shows a **consistent decline from 2013 through 2016**, worsening over time. This is the most straightforwardly deteriorating item on the list.
+Sold in Washington, Kansas, Texas and Wisconsin. Trend shows a **consistent decline from 2013 through 2016**, worsening over time. This is the most straightforwardly deteriorating item on the list.
 
 ---
 
@@ -127,49 +124,33 @@ The sharp mid-2016 dip followed by recovery suggests a one-time event, not a str
 The only item showing a consistently worsening trend across all 4 years. No recovery signal anywhere in the data. This one is genuinely and increasingly unprofitable.
 
 ---
-
-## 🔄 Data Transformation
-
-- Structured profit data at Category, Sub-category, and Item level across three departments
-- Created calculated fields for profit range (min/max) to power the diverging color legend
-- Built two cross-filter dashboard actions in Tableau linking charts as described above
-- Applied Department as both a dropdown filter and drill-down dimension
-- Set state-level geographic roles on the map with profit as the color measure
-- Configured Top 10 filter to show worst-performing items by profit ascending
-
----
-
-## 📸 Dashboard Preview
+- ## 📸 Dashboard Preview
 
 **Full Dashboard — All Departments**
 
-![Full Dashboard](dashboard_overview.png)
+<img src="dashboard_overview.png" width="800"/>
 
 **Okidata Pacemark — Recovering Trend**
 
-![Okidata](okidata_filter.png)
+<img src="okidata_filter.png" width="800"/>
 
 **Polycom ViewStation — Improved Then Dipped**
 
-![Polycom](polycom_filter.png)
+<img src="polycom_filter.png" width="800"/>
 
 **Epson DFX-8500 — Persistent Loss with 2016 Crash**
 
-![Epson](epson_filter.png)
+<img src="epson_filter.png" width="800"/>
 
 **Global High-Back Leather Tilter — Improving Overall**
 
-![Global High Back](global_highback_filter.png)
+<img src="global_highback_filter.png" width="800"/>
 
 **Lesro Sheffield Coffee Table — Consistently Declining**
 
-![Lesro](lesro_filter.png)
+<img src="lesro_filter.png" width="800"/>
 
 > 💡 **Live Dashboard:** [View on Tableau Public](#) ← *Replace with your Tableau Public link*
 
 ---
-
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:2e86c1,100:8B0000&height=120&section=footer)
-
-
 
