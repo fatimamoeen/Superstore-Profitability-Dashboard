@@ -77,7 +77,7 @@ Switches the entire dashboard between All, Furniture, Office Supplies, and Techn
 Sold in California, Texas, and Washington only. The profit trend shows a **sharp upward recovery from 2015 Q2 onward**, crossing the trend line and approaching 0K by end of 2016. This is a geographically concentrated loss — not a globally broken product.
 
 
-<img width="527" height="347" alt="image" src="https://github.com/user-attachments/assets/d2fe3ba1-5efc-41d8-b86a-f6bef6bae755" />
+<img width="249" height="169" alt="image" src="https://github.com/user-attachments/assets/d2fe3ba1-5efc-41d8-b86a-f6bef6bae755" />
 
 
 **Polycom ViewStation ISDN — Profit: -$36,447**
@@ -145,8 +145,5 @@ The only item showing a consistently worsening trend across all 4 years. No reco
 
 
 <img width="527" height="415" alt="image" src="https://github.com/user-attachments/assets/40f3a67d-de4a-477c-830a-9647556282dd" />
-
----
--
 <img width="468" height="335" alt="image" src="https://github.com/user-attachments/assets/75bf6cac-04e0-4995-a1ea-6978dd0cf847" />
 
