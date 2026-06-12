@@ -75,23 +75,36 @@ Switches the entire dashboard between All, Furniture, Office Supplies, and Techn
 
 **Okidata Pacemark 4410N — Profit: -$39,743**
 Sold in California, Texas, and Washington only. The profit trend shows a **sharp upward recovery from 2015 Q2 onward**, crossing the trend line and approaching 0K by end of 2016. This is a geographically concentrated loss — not a globally broken product.
+
+
 <img width="527" height="347" alt="image" src="https://github.com/user-attachments/assets/d2fe3ba1-5efc-41d8-b86a-f6bef6bae755" />
 
 
 **Polycom ViewStation ISDN — Profit: -$36,447**
 Sold in Pacific Northwest and Southeast (Washington, Oregon, Idaho, North Carolina, Alabama). Trend shows **steady improvement from 2013 through mid-2015**, then a dip in late 2015. The improvement phase is real and visible — this product was recovering before something disrupted it.
+
+
 <img width="249" height="169" alt="image" src="https://github.com/user-attachments/assets/0bb5bf35-a41e-4f38-84c4-042be2602553" />
 
 
 **Global High-Back Leather Tilter, Burgundy — Profit: -$23,238**
 Sold broadly across many US states. Profit trend shows **consistent upward improvement across the full 2013–2016 period**, staying above the trend line for most quarters. Of all items on this list, this one shows the clearest recovery signal.
+
+
+
 <img width="232" height="165" alt="image" src="https://github.com/user-attachments/assets/467ff5ba-96a8-4b70-8637-de3a30b5664a" />
 
 Sold in California, Texas, and Wisconsin. Trend shows a **stable loss pattern, then a sharp crash in mid-2016, followed by a recovery back to 0K**. The crash suggests a one-time event (bulk discount or returns spike) rather than a structural problem — but the overall loss is persistent.
+
+
+
 <img width="245" height="160" alt="image" src="https://github.com/user-attachments/assets/0d8a68c5-bb6c-45d5-9563-4a851109f1d1" />
 
 **Lesro Sheffield Collection Coffee Table — Profit: -$14,874**
 Sold in Washington, Kansas, Texas and Wisconsin. Trend shows a **consistent decline from 2013 through 2016**, worsening over time. This is the most straightforwardly deteriorating item on the list.
+
+
+
 <img width="234" height="171" alt="image" src="https://github.com/user-attachments/assets/034dca43-a0db-4b2d-948d-b9b59bcc51f8" />
 
 ---
@@ -128,6 +141,10 @@ The sharp mid-2016 dip followed by recovery suggests a one-time event, not a str
 
 **5. Lesro Sheffield — exit or reprice urgently**
 The only item showing a consistently worsening trend across all 4 years. No recovery signal anywhere in the data. This one is genuinely and increasingly unprofitable.
+## Dashboard Preview
+
+
+<img width="527" height="415" alt="image" src="https://github.com/user-attachments/assets/40f3a67d-de4a-477c-830a-9647556282dd" />
 
 ---
 -
