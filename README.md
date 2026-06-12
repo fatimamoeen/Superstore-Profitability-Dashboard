@@ -13,10 +13,10 @@
 
 ## 📌 Table of Contents
 
-- [The Question](#the-question)
+- [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Dashboard Features](#dashboard-features)
-- [Investigation — What The Data Shows](#investigation--what-the-data-shows)
+- [Key Findings](#key-findings)
 - [The Verdict](#the-verdict)
 - [Business Recommendations](#business-recommendations)
 - [Data Transformation](#data-transformation)
@@ -24,15 +24,13 @@
 
 ---
 
-## ❓ The Question
+## 📖 Introduction
+
+I had the opportunity to complete this project using a **US Retail Superstore Dataset** spanning 2013–2016. The central question driving this analysis is:
 
 > *"Is the least profitable product always truly unprofitable — or is context everything?"*
 
-This is not just a dashboard. It is an investigation.
-
-A retail company is bleeding money on certain products. The instinct is simple: if something is losing money, cut it. But is that always right? Could a loss-making item today be recovering tomorrow? Could the problem be geographic — not the product itself, but *where* it is being sold?
-
-This Tableau dashboard was built to answer exactly that — by drilling into a US retail dataset spanning **2013 to 2016** across three departments: Furniture, Office Supplies, and Technology.
+The dataset covers a retail company selling across three departments — **Furniture, Office Supplies, and Technology** — across multiple US states. My goal was to build an interactive Tableau dashboard that goes beyond surface-level numbers and investigates the *story behind the losses*: which products are genuinely bleeding money, which are recovering, and whether the answer to the title question is yes or no.
 
 ---
 
@@ -41,10 +39,9 @@ This Tableau dashboard was built to answer exactly that — by drilling into a U
 | Aspect | Details |
 |---|---|
 | **Central Question** | Is the least profitable product always truly unprofitable? |
-| **Business Goal** | Identify which loss-making items are genuinely dead weight vs. which are recoverable — so management can make data-backed cut/keep/fix decisions |
+| **Business Goal** | Identify which loss-making items are genuinely unprofitable vs. which are situationally recoverable |
 | **Time Frame** | FY 2013 – FY 2016 |
-| **Grain** | One record per product per order |
-| **Key Dimensions** | Date → Quarter/Year, Department, Category, Sub-category, Item, US State |
+| **Key Dimensions** | Date → Quarter/Year, Department, Category, Item, US State |
 | **Key Facts** | Profit value, Profit trend over time, Geographic profit distribution |
 | **Tool Used** | Tableau Desktop / Tableau Public |
 
@@ -52,107 +49,93 @@ This Tableau dashboard was built to answer exactly that — by drilling into a U
 
 ## ✨ Dashboard Features
 
-The dashboard is fully **interactive and cross-filtered** — every click on one chart updates all others simultaneously.
+The dashboard has two cross-filter actions that make it fully interactive.
 
-**Category Bar Chart (left)** — Click any category to filter the entire dashboard: Top 10 Items, Map, and Profit Trend all update to show only that category's data.
+**Category Bar Chart → All 3 charts**
+Clicking any category filters the Top 10 Items chart, the Map, and the Profit Trend simultaneously — showing data only for that selected category.
 
-**Top 10 Least Profitable Items (right)** — Click any individual item to see exactly which states it was sold in and how its profit trend moved over time. Hover to see exact profit values.
+**Top 10 Items Chart → Map + Profit Trend**
+Clicking any individual item filters the Map and Profit Trend to show only that item's geographic distribution and time-based performance — revealing whether losses are concentrated in specific states or spread broadly.
 
-**Profit By State Map** — Color-coded from red (heavy loss) to blue (profit). Reveals geographic concentration of losses — critical for deciding whether a product is globally bad or just regionally mispriced.
-
-**Profit Trend Line** — Shows quarterly profit movement with a dashed forecast/average line. The gap between the trend line and actual line tells you whether an item is improving or deteriorating.
-
-**Department Filter Dropdown** — Switch between All, Furniture, Office Supplies, and Technology to isolate departmental performance.
+**Department Dropdown Filter**
+Switches the entire dashboard between All, Furniture, Office Supplies, and Technology views.
 
 ---
 
-## 🔍 Investigation — What The Data Shows
+## 🔍 Key Findings
 
-### Step 1 — Who are the worst offenders?
-
-The Top 10 Least Profitable items across all departments (exact values from dashboard):
+### Top 5 Least Profitable Items — Exact Values
 
 | Rank | Item | Profit | Department |
 |---|---|---|---|
-| 1 | Polycom ViewStation ISDN | **-$36,447** | Technology |
-| 2 | Epson DFX-8500 Dot Matrix Printer | **-$29,557** | Technology |
-| 3 | Okidata Pacemark 4410N | **-$26,934** | Technology |
-| 4 | Global High-Back Leather Tilter, Burgundy | **-$23,238** | Furniture |
-| 5 | Tables (category total) | **~-$50,000** | Furniture |
+| 1 | Okidata Pacemark 4410N Wide Format | **-$39,743** | Technology |
+| 2 | Polycom ViewStation ISDN | **-$36,447** | Technology |
+| 3 | Global High-Back Leather Tilter, Burgundy | **-$23,238** | Furniture |
+| 4 | Epson DFX-8500 Dot Matrix Printer | **-$22,134** | Technology |
+| 5 | Lesro Sheffield Collection Coffee Table | **-$14,874** | Furniture |
 
-### Step 2 — Are they always unprofitable, or just sometimes?
+### What the Trend and Map Reveal Per Item
 
-This is where the title's question gets interesting.
+**Okidata Pacemark 4410N — Profit: -$39,743**
+Sold in California, Texas, and Massachusetts only. The profit trend shows a **sharp upward recovery from 2015 Q2 onward**, crossing the trend line and approaching 0K by end of 2016. This is a geographically concentrated loss — not a globally broken product.
 
-**Okidata Pacemark 4410N** — Loss of -$26,934 overall. But the profit trend chart shows a **sharp upward recovery from 2015 onward**, crossing the trend line and approaching 0K by 2016. Geographically confined to California and Massachusetts only. This item is not globally broken — it is a **geographic pricing problem**, not a product death sentence.
+**Polycom ViewStation ISDN — Profit: -$36,447**
+Sold in Pacific Northwest and Southeast (Washington, Oregon, Idaho, North Carolina, Alabama). Trend shows **steady improvement from 2013 through mid-2015**, then a dip in late 2015. The improvement phase is real and visible — this product was recovering before something disrupted it.
 
-**Polycom ViewStation** — Loss of -$36,447 overall. Trend shows it was **improving steadily from 2013 to mid-2015**, then dropped. Sold in Pacific Northwest states (Washington, Oregon, Idaho). The improvement phase suggests it had potential — the 2015 drop likely signals a discounting or returns event, not inherent unprofitability.
+**Global High-Back Leather Tilter, Burgundy — Profit: -$23,238**
+Sold broadly across many US states. Profit trend shows **consistent upward improvement across the full 2013–2016 period**, staying above the trend line for most quarters. Of all items on this list, this one shows the clearest recovery signal.
 
-**Epson DFX-8500** — Loss of -$29,557. Sold almost entirely in California and Texas. Trend shows **consistent losses with a dramatic crash in late 2016** — this one shows no recovery. Genuinely and consistently unprofitable.
+**Epson DFX-8500 Dot Matrix Printer — Profit: -$22,134**
+Sold in California, Texas, and Wisconsin. Trend shows a **stable loss pattern, then a sharp crash in mid-2016, followed by a recovery back to 0K**. The crash suggests a one-time event (bulk discount or returns spike) rather than a structural problem — but the overall loss is persistent.
 
-**Tables (Furniture)** — ~-$50,000 in total losses. Trend fluctuates around 0K with no sustained positive period. Sold broadly across many states. No geographic fix available — the category itself is structurally loss-making.
-
-**Global High-Back Leather Tilter** — Loss of -$23,238 but the **Furniture department's overall trend was improving** from 2013 to 2016. This item is dragging an otherwise recovering department down.
-
-### Step 3 — What about the categories with no least-profit items?
-
-This is equally important. Multiple categories showed **zero items in the Top 10 loss list**:
-- Appliances, Paper, Labels, Storage & Organization, Pens & Art Supplies, Scissors & Rulers, Rubber Bands — all in Office Supplies
-- Bookcases — in Furniture
-
-These categories are **consistently healthy**. The company's profit engine is intact — the problem is concentrated in specific items, not the business overall.
+**Lesro Sheffield Collection Coffee Table — Profit: -$14,874**
+Sold in Washington, Kansas, Texas, Wisconsin, New York, and Massachusetts. Trend shows a **consistent decline from 2013 through 2016**, worsening over time. This is the most straightforwardly deteriorating item on the list.
 
 ---
 
 ## 🏁 The Verdict
 
-> **Answer: Not always — but in this dataset, mostly yes.**
+> **Answer: No — least profitable is not always unprofitable. But it depends on the item.**
 
-The data reveals two distinct groups hiding inside the "least profitable" label:
+The data reveals two distinct groups inside the "least profitable" label:
 
-**Group A — Genuinely Unprofitable (Cut or Reprice)**
-Epson DFX-8500 and Tables show no recovery trend, no geographic pattern that can be fixed, and consistent losses across the entire time period. These are structural problems.
+**Group A — Recovering (Do Not Cut Yet)**
+Okidata, Polycom, and Global High-Back Leather Tilter all show improving profit trends. Their losses are either geographically concentrated or trending toward zero. Cutting these without further investigation would be premature.
 
-**Group B — Situationally Unprofitable (Investigate Before Cutting)**
-Okidata Pacemark and Polycom ViewStation were showing improving trends before their respective crashes. Their losses are geographically concentrated, not universal. Cutting them without investigation would be a premature decision.
+**Group B — Genuinely Declining (Investigate or Exit)**
+Lesro Sheffield shows a consistent worsening trend across 4 years. Epson DFX-8500 has a persistent loss with a mid-2016 crash. These need either a pricing fix or discontinuation.
 
-So the answer to "Is Least Profitable Always Unprofitable?" is:
-
-**No — but you need the trend and the geography to know which is which. A single profit number is not enough.**
+A single profit number is not enough to make the call. The trend direction and geographic concentration change the answer completely.
 
 ---
 
 ## 💡 Business Recommendations
 
-All recommendations below are based directly on dashboard data — no assumptions added.
+**1. Do not cut Okidata immediately — fix the geography first**
+Loss of -$39,743 but recovering sharply. Audit California and Texas pricing. If a correction was already applied, this product may self-resolve.
 
-**1. Discontinue the Epson DFX-8500 immediately**
-Profit: -$29,557. No recovery visible in trend. Concentrated in California and Texas. Geographic restriction or full discontinuation would have immediate P&L impact.
+**2. Investigate what disrupted Polycom in late 2015**
+The improving trend from 2013–2015 was real. A specific event (returns, bulk discount, or pricing error) broke the trajectory. Identifying it could restore profitability.
 
-**2. Investigate Okidata Pacemark before cutting**
-Profit: -$26,934 overall, but trend was recovering sharply by 2016. Sold only in California and Massachusetts. Check if a pricing correction was already applied — the data suggests it may have been self-correcting.
+**3. Monitor Global High-Back Leather Tilter — trend is positive**
+At -$23,238 it looks bad. But the 2013–2016 trend is the most consistently improving of all loss-makers. Give it another review period before any exit decision.
 
-**3. Exit the Tables category or renegotiate supplier cost**
-~-$50,000 total loss with no sustained profitable period in 4 years. The category is sold broadly — this is not a regional fix. Either a supplier renegotiation or full exit is needed.
+**4. Investigate Epson's 2016 crash event**
+The sharp mid-2016 dip followed by recovery suggests a one-time event, not a structural problem. Cross-reference with sales records before discontinuing.
 
-**4. Review Polycom's 2015 discount/returns event**
-The trend was improving before mid-2015. Something happened — likely a bulk discount or returns spike. If that event was one-time, the product may be viable with pricing guardrails.
-
-**5. Protect Telephones & Binders — do not discount these**
-These are the top two profit-generating categories. They are currently subsidizing losses elsewhere. Aggressive discounting here would expose the P&L immediately.
+**5. Lesro Sheffield — exit or reprice urgently**
+The only item showing a consistently worsening trend across all 4 years. No recovery signal anywhere in the data. This one is genuinely and increasingly unprofitable.
 
 ---
 
 ## 🔄 Data Transformation
 
-The following steps were applied before building the dashboard:
-
-- Structured profit data at Category, Sub-category, and Item level for three departments
+- Structured profit data at Category, Sub-category, and Item level across three departments
 - Created calculated fields for profit range (min/max) to power the diverging color legend
-- Built cross-filter dashboard actions in Tableau linking all four views
-- Applied Department as both a dropdown filter and a drill-down dimension
-- Set up state-level geographic roles on the map with profit as the color measure
-- Configured the Top 10 filter to show worst-performing items by profit ascending
+- Built two cross-filter dashboard actions in Tableau linking charts as described above
+- Applied Department as both a dropdown filter and drill-down dimension
+- Set state-level geographic roles on the map with profit as the color measure
+- Configured Top 10 filter to show worst-performing items by profit ascending
 
 ---
 
@@ -162,25 +145,31 @@ The following steps were applied before building the dashboard:
 
 ![Full Dashboard](dashboard_overview.png)
 
-**Okidata Pacemark — Recovering Trend (supports "Not Always" verdict)**
+**Okidata Pacemark — Recovering Trend**
 
-![Okidata Recovery](okidata_filter.png)
+![Okidata](okidata_filter.png)
 
-**Polycom ViewStation — Improving then Crashing**
+**Polycom ViewStation — Improved Then Dipped**
 
-![Polycom Filter](polycom_filter.png)
+![Polycom](polycom_filter.png)
 
-**Epson DFX-8500 — Genuinely Unprofitable**
+**Epson DFX-8500 — Persistent Loss with 2016 Crash**
 
-![Epson Filter](epson_filter.png)
+![Epson](epson_filter.png)
 
-**Tables Category — Structural Loss**
+**Global High-Back Leather Tilter — Improving Overall**
 
-![Tables Filter](tables_filter.png)
+![Global High Back](global_highback_filter.png)
 
-> 💡 **Live Interactive Dashboard:** [View on Tableau Public](#) ← *Replace with your Tableau Public link*
+**Lesro Sheffield Coffee Table — Consistently Declining**
+
+![Lesro](lesro_filter.png)
+
+> 💡 **Live Dashboard:** [View on Tableau Public](#) ← *Replace with your Tableau Public link*
 
 ---
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:2e86c1,100:8B0000&height=120&section=footer)
+
+
 
