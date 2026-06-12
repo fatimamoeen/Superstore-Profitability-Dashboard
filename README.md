@@ -141,5 +141,10 @@ The sharp mid-2016 dip followed by recovery suggests a one-time event, not a str
 
 **5. Lesro Sheffield — exit or reprice urgently**
 The only item showing a consistently worsening trend across all 4 years. No recovery signal anywhere in the data. This one is genuinely and increasingly unprofitable.
+## Dashboard Preview
+
+
+<img width="527" height="415" alt="image" src="https://github.com/user-attachments/assets/40f3a67d-de4a-477c-830a-9647556282dd" />
+
 0-4995-a1ea-6978dd0cf847" />
 
