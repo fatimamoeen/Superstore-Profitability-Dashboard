@@ -126,9 +126,8 @@ The only item showing a consistently worsening trend across all 4 years. No reco
 ---
 - ## 📸 Dashboard Preview
 
-**Full Dashboard — All Departments**
+<img width="468" height="335" alt="image" src="https://github.com/user-attachments/assets/75bf6cac-04e0-4995-a1ea-6978dd0cf847" />
 
-<img src="dashboard_overview.png" width="800"/>
 
 **Okidata Pacemark — Recovering Trend**
 
