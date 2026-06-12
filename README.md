@@ -125,31 +125,7 @@ The only item showing a consistently worsening trend across all 4 years. No reco
 
 ---
 - ## 📸 Dashboard Preview
+<img width="250" height="166" alt="image" src="https://github.com/user-attachments/assets/a2782404-3d4d-4f50-8b1e-cac08b2944c8" />
 
 <img width="468" height="335" alt="image" src="https://github.com/user-attachments/assets/75bf6cac-04e0-4995-a1ea-6978dd0cf847" />
-
-
-**Okidata Pacemark — Recovering Trend**
-
-<img src="okidata_filter.png" width="800"/>
-
-**Polycom ViewStation — Improved Then Dipped**
-
-<img src="polycom_filter.png" width="800"/>
-
-**Epson DFX-8500 — Persistent Loss with 2016 Crash**
-
-<img src="epson_filter.png" width="800"/>
-
-**Global High-Back Leather Tilter — Improving Overall**
-
-<img src="global_highback_filter.png" width="800"/>
-
-**Lesro Sheffield Coffee Table — Consistently Declining**
-
-<img src="lesro_filter.png" width="800"/>
-
-> 💡 **Live Dashboard:** [View on Tableau Public](#) ← *Replace with your Tableau Public link*
-
----
 
